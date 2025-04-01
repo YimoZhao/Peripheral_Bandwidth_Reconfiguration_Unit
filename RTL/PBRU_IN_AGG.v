@@ -1,3 +1,24 @@
+////////////////////////////////////////////////////////////////////////////////
+// Project Name    : Peripheral Bandwidth Reconfiguration Unit (PBRU)
+// Module Name     : PBRU_IN_AGG
+// Organization    : Boston University
+// Author          : Yimo Zhao
+// Create Date     : 02/13/2025
+// Description     : 
+//     This module aggregates narrow peripheral inputs into a wider internal
+//     data bus for processing. It performs input-side bandwidth expansion by 
+//     sequentially or concurrently merging data from multiple input channels,
+//     buffering them as needed and aligning them to the target bus width.
+// Key Features    :
+//     - Multi-channel FIFO input interface
+//     - Round-robin or configurable input scheduling
+//     - Aggregated output aligned to processor data width
+//
+// Version         : 1.0
+// Comments        : 
+//     Designed for flexible bandwidth matching between low-bandwidth peripheral
+//     sources and high-throughput compute cores.
+////////////////////////////////////////////////////////////////////////////////
 module PBRU_IN_AGG #(
     parameter INPUT_WIDTH  =16, 
     parameter SET_NUMBER   =64,
